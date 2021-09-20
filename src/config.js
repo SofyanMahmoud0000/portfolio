@@ -44,8 +44,8 @@ module.exports = {
         'Linux',
         'Machine learning',
         'Deep learning',
-        'Touch typing',
-        'CNN'
+        'CNN',
+        'Touch typing'
     ],
     experiences: [
         { 
