@@ -9,7 +9,8 @@ module.exports = {
             projects: [
                 'sofyanmahmoud0000.github.io',
                 'sofyanmahmoud0000',
-                'portfolio'
+                'portfolio',
+                'JScalculator'
             ] // These projects will not be displayed. example: ['my-project1', 'my-project2']
         }
     },
