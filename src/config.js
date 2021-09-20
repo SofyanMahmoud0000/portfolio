@@ -94,7 +94,7 @@ module.exports = {
             stack: ['laravel', 'php', 'mysql', 'js', 'css', 'html']
         },
         {
-            name: "Car awarness system and weather enhacement",
+            name: "GP - Car awarness system and weather enhacement",
             html_url: null,
             description: `This is my graduation project, it's to detect the weather for autonomus car and \
             enhance the adverse weather to improve object detection and improve the sensor fusion.
