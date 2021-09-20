@@ -49,19 +49,19 @@ module.exports = {
     ],
     experiences: [
         { 
-            company: 'NajahNow',
+            company: 'NajahNow Company',
             position: 'Team leader and code reviewer',
             from: 'July 2021',
             to: 'Auguts 2021'
         },
         { 
-            company: 'NajahNow',
+            company: 'NajahNow Company',
             position: 'Software Engineer - Part time',
             from: 'September 2020',
             to: 'March 2021'
         },
         { 
-            company: 'NajahNow',
+            company: 'NajahNow Company',
             position: 'Software Engineer - Intern',
             from: 'July 2020',
             to: 'September 2020'
