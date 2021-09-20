@@ -95,10 +95,10 @@ module.exports = {
         },
         {
             name: "GP - Car awarness system and weather enhacement",
-            html_url: null,
-            description: `This is my graduation project, it's to detect the weather for autonomus car and \
+            html_url: "https://drive.google.com/file/d/11GYtO8znR4oq7MEnZ1taFSAtn_udwmGb/view?usp=sharing",
+            description: `This is my graduation project, it's to detect the weather condition for autonomus car and \
             enhance the adverse weather to improve object detection and improve the sensor fusion.
-            Grade - Excellent`,
+            I got excellent in this project and you can click to see the demo`,
 
             stack: ['CNN', 'Machine Learning', 'Deep Learning', 'Python', 'Tensorflow', 'Colab']
         }
