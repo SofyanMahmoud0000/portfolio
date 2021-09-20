@@ -104,9 +104,11 @@ module.exports = {
         }
     ],
     aboutMe: [
-        `Ever since I was a little kid, software development has been my passion. It was my dream to study in faculty of engieering department of computer and I have achevied what I want to start studying C++, algorithm and data structure and then start to love the software development more and more and figure out that is my happiness to spend my time front of terminal and black screen
-        So, it was awesome time when spend it in self learning to learn (php, larave, regex, github, touching type, etc.....) and specially (problem sloving).
-        And now hope to use all my knowledge as a (software developer engineer) with an active team to build a great thing and learn from each other more and mroe`
+        `I'm Sofyan Mahmoud, software engineer graudated from Cairo university, faculty of engineering \ 
+        computer engineering department with overall grade - Very good, Excellent for graduation project, 
+        for more information about graduation project, you can check my projects.\n
+        I\'m interested in Problem solving and development, and here it is my portfolio to see in details \
+        all my project and my tech stack. Enjoy 💜`
     ],
     under_bio: 'I\’m currently performing my compulsory military service',
     work: '',
