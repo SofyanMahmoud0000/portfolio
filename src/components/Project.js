@@ -50,6 +50,71 @@ const Project = (props) => {
         return array;
     }
 
+    const classNamePointer = (html_url) => {
+        if(html_url == null)
+            return "card shadow-lg compact bg-base-100"
+        else 
+            return "card shadow-lg compact bg-base-100 cursor-pointer"
+    }
+
+    const renderProjectsExtra = () => {
+        return config.extra_projects.map((item, index) => (
+            <div
+                className={classNamePointer(item.html_url)}
+                key={index}
+                onClick={() => {
+                    if(item.html_url != null){
+                        try {
+                            if (config.googleAnalytics.id) {
+                                ga.event({
+                                    action: "Click project",
+                                    params: {
+                                        project: item.name
+                                    }
+                                });
+                            }
+                        } catch (error) {
+                            console.error(error);
+                        }
+    
+                        window.open(item.html_url, '_blank')
+                    }
+                }}
+            >
+                <div className="flex justify-between flex-col p-8 h-full w-full">
+                    <div>
+                        <div className="flex items-center opacity-60">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                            <span>
+                                <h5 className="card-title text-lg">
+                                    {item.name}
+                                </h5>
+                            </span>
+                        </div>
+                        <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
+                            {item.description}
+                        </p>
+                    </div>
+                    <div className="flex justify-between text-sm text-base-content text-opacity-60">
+                        
+                        <div>
+    
+                            {
+                                item.stack.map((s, index) => (
+                                    <div key={index} className="m-1 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 badge-primary bg-opacity-75 rounded-full">
+                                        {s}
+                                    </div>
+                                ))
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+
+
     const renderProjects = () => {
         return props.repo.map((item, index) => (
             <div
@@ -106,7 +171,7 @@ const Project = (props) => {
                     </div>
                 </div>
             </div>
-        ));
+        ))
     }
 
     return (
@@ -146,6 +211,15 @@ const Project = (props) => {
                     </div>
                     <div className="col-span-2">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {(loading || !props.repo) ? renderSkeleton() : renderProjectsExtra()}
+                            
+                        </div>
+                    </div>
+
+                                        
+                    <div className="col-span-2">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
                             {(loading || !props.repo) ? renderSkeleton() : renderProjects()}
                         </div>
                     </div>

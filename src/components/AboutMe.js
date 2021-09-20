@@ -47,7 +47,7 @@ const AboutMe = () => {
                                         <h5 className="card-title">
                                             {
                                                 loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
-                                                    <span className="opacity-70">👋  I'm Sofyan Mahmoud</span>
+                                                    <span className="opacity-70">👋 Hi :)</span>
                                                 )
                                             }
                                         </h5>

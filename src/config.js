@@ -3,12 +3,13 @@ module.exports = {
     github: {
         username: 'sofyanmahmoud0000', // Your GitHub org/user name. (Required)
         sortBy: 'updated', // stars | updated
-        limit: 8, // How many projects to display.
+        limit: 1e2, // How many projects to display.
         exclude: {
             forks: true, // Forked projects will not be displayed if set to true.
             projects: [
                 'sofyanmahmoud0000.github.io',
-                'sofyanmahmoud0000'
+                'sofyanmahmoud0000',
+                'portfolio'
             ] // These projects will not be displayed. example: ['my-project1', 'my-project2']
         }
     },
@@ -80,6 +81,26 @@ module.exports = {
             to: '2016',
             grade: '99%'
         },
+    ],
+    extra_projects: [
+        {
+            name: "Najahnow",
+            html_url: "https://najahnow.net",
+            description: `A website for online education help teacher and student to meet.
+            I have worked on this project when I was a software engineer at najahnow company and it\'s the main website \
+            for the company`, 
+
+            stack: ['laravel', 'php', 'mysql', 'js', 'css', 'html']
+        },
+        {
+            name: "Car awarness system and weather enhacement",
+            html_url: null,
+            description: `This is my graduation project, it's to detect the weather for autonomus car and \
+            enhance the adverse weather to improve object detection and improve the sensor fusion.
+            Grade - Excellent`,
+
+            stack: ['CNN', 'Machine Learning', 'Deep Learning', 'Python', 'Tensorflow', 'Colab']
+        }
     ],
     aboutMe: [
         `Ever since I was a little kid, software development has been my passion. It was my dream to study in faculty of engieering department of computer and I have achevied what I want to start studying C++, algorithm and data structure and then start to love the software development more and more and figure out that is my happiness to spend my time front of terminal and black screen
