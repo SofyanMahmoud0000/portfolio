@@ -3,6 +3,7 @@ import LazyImage from "./LazyImage";
 import PropTypes from 'prop-types';
 import { useContext } from "react";
 import { LoadingContext } from "../contexts/LoadingContext";
+import config from "../config";
 
 const AvatarCard = (props) => {
     const [loading] = useContext(LoadingContext);
@@ -55,7 +56,17 @@ const AvatarCard = (props) => {
                         {
                             (loading || !props.profile) ? (
                                 skeleton({ width: 'w-48', height: 'h-5' })
-                            ) : props.profile.bio
+                            ) : (config.work.length != 0) ? config.work: props.profile.bio
+                            
+                        }
+                    </div>
+
+                    <div className="mt-3 text-base-content text-opacity-60">
+                        {
+                            (loading || !props.profile) ? (
+                                skeleton({ width: 'w-48', height: 'h-5' })
+                            ) : config.under_bio
+                            
                         }
                     </div>
                 </div>

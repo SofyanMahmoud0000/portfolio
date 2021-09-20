@@ -107,6 +107,8 @@ module.exports = {
         So, it was awesome time when spend it in self learning to learn (php, larave, regex, github, touching type, etc.....) and specially (problem sloving).
         And now hope to use all my knowledge as a (software developer engineer) with an active team to build a great thing and learn from each other more and mroe`
     ],
+    under_bio: 'I\’m currently performing my compulsory military service',
+    work: '',
     blog: {
         // Display blog posts from your medium or dev.to account. (Optional)
         source: '', // medium | dev.to
