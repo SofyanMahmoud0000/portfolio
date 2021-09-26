@@ -22,9 +22,11 @@ module.exports = {
         behance: '',
         medium: '',
         devto: '',
-        website: 'https://sofyanmahmoud0000.github.io',
+        website: /*"https://sofyanmahmoud0000.github.io/portfolio"*/'',
         phone: '+201158025968',
-        email: 'sofyan1020@gmail.com'
+        email: 'sofyan1020@gmail.com',
+        leetcode: `sofyan1020/`,
+        codeforces: 'Sofyan_Mahmoud',
     },
     skills: [
         'Algorithms',
@@ -61,7 +63,7 @@ module.exports = {
             to: 'March 2021'
         },
         { 
-            company: 'NajahNow Company',
+            company: 'NajahNow Company via ITIDA internship program',
             position: 'Software Engineer - Intern',
             from: 'July 2020',
             to: 'September 2020'
@@ -104,12 +106,13 @@ module.exports = {
         }
     ],
     aboutMe: [
-        `I'm Sofyan Mahmoud, software engineer graudated from Cairo university, faculty of engineering \ 
+        `I'm Sofyan Mahmoud, software engineer graduated from Cairo university, faculty of engineering, \ 
         computer engineering department with overall grade - Very good, Excellent for graduation project, 
         for more information about graduation project, you can check my projects.\n
         I\'m interested in Problem solving and development, and here it is my portfolio to see in details \
         all my project and my tech stack. Enjoy 💜`
     ],
+    resume: 'resume.pdf',
     under_bio: 'I\’m currently performing my compulsory military service',
     work: '',
     blog: {

@@ -1,4 +1,4 @@
-import { MdLocationOn, MdMail } from 'react-icons/md';
+import { MdLocationOn, MdMail, MdFileDownload } from 'react-icons/md';
 import { AiFillGithub, AiFillMediumSquare } from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
 import { GrLinkedinOption } from 'react-icons/gr';
@@ -10,9 +10,20 @@ import { skeleton } from '../helpers/utils';
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { LoadingContext } from '../contexts/LoadingContext';
+import { Link } from 'react-router-dom'
+import { saveAs } from "file-saver";
+import { Icon } from '@iconify/react';
 
 const Details = (props) => {
     const [loading] = useContext(LoadingContext);
+
+
+    const saveFile = () => {
+        saveAs(
+            config.resume,
+            "Sofyan_Software_Engineer.pdf"
+        )
+    }
 
     const renderSkeleton = () => {
         let array = [];
@@ -42,7 +53,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <MdLocationOn className="mr-2"/>
+                                                    <MdLocationOn className="mr-2" />
                                                 </div>
                                                 <div>
                                                     {props.profile.location}
@@ -56,7 +67,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <FaBuilding className="mr-2"/>
+                                                    <FaBuilding className="mr-2" />
                                                 </div>
                                                 <div>
                                                     {props.profile.company}
@@ -68,7 +79,7 @@ const Details = (props) => {
                                 <li>
                                     <span>
                                         <div>
-                                            <AiFillGithub className="mr-2"/>
+                                            <AiFillGithub className="mr-2" />
                                         </div>
                                         <div>
                                             <a
@@ -87,7 +98,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <GrLinkedinOption className="mr-2"/>
+                                                    <GrLinkedinOption className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -104,11 +115,52 @@ const Details = (props) => {
                                     )
                                 }
                                 {
+                                    typeof config.resume !== 'undefined' && config.resume && (
+                                        <li>
+                                            <span>
+                                                <div>
+                                                    <Icon icon="simple-icons:leetcode" className="mr-2" />
+                                                </div>
+
+                                                <a
+                                                    href={`https://leetcode.com/${config.social.leetcode}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {`My leetcode account`}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+
+                                {
+                                    typeof config.resume !== 'undefined' && config.resume && (
+                                        <li>
+                                            <span>
+                                                <div>
+                                                    <Icon icon="simple-icons:codeforces" className="mr-2" />
+                                                </div>
+
+                                                <a
+                                                    href={`https://codeforces.com/profile/${config.social.codeforces}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {`My codeforces account`}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
                                     typeof config.social.twitter !== 'undefined' && config.social.twitter && (
                                         <li>
                                             <span>
                                                 <div>
-                                                    <SiTwitter className="mr-2"/>
+                                                    <SiTwitter className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -129,7 +181,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <CgDribbble className="mr-2"/>
+                                                    <CgDribbble className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -150,7 +202,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <FaBehanceSquare className="mr-2"/>
+                                                    <FaBehanceSquare className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -171,7 +223,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <FaFacebook className="mr-2"/>
+                                                    <FaFacebook className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -192,7 +244,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <AiFillMediumSquare className="mr-2"/>
+                                                    <AiFillMediumSquare className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -213,7 +265,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <FaDev className="mr-2"/>
+                                                    <FaDev className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -234,7 +286,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <FaGlobe className="mr-2"/>
+                                                    <FaGlobe className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -255,7 +307,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <RiPhoneFill className="mr-2"/>
+                                                    <RiPhoneFill className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -275,7 +327,7 @@ const Details = (props) => {
                                         <li>
                                             <span>
                                                 <div>
-                                                    <MdMail className="mr-2"/>
+                                                    <MdMail className="mr-2" />
                                                 </div>
                                                 <div>
                                                     <a
@@ -291,6 +343,22 @@ const Details = (props) => {
                                         </li>
                                     )
                                 }
+                                {
+                                    typeof config.resume !== 'undefined' && config.resume && (
+                                        <li>
+                                            <span>
+                                                <div>
+                                                    <MdFileDownload className="mr-2" />
+                                                </div>
+
+                                                <div onClick={saveFile} className="cursor-pointer">
+                                                    {'My resume'}
+                                                </div>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+
                             </>
                         )
                     }
