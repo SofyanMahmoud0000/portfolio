@@ -25,8 +25,8 @@ module.exports = {
         website: /*"https://sofyanmahmoud0000.github.io/portfolio"*/'',
         phone: '+201158025968',
         email: 'sofyan1020@gmail.com',
-        leetcode: `sofyan1020/`,
-        codeforces: 'Sofyan_Mahmoud',
+        leetcode: /*`sofyan1020/`*/'',
+        codeforces: /*'Sofyan_Mahmoud'*/'',
     },
     skills: [
         'Algorithms',

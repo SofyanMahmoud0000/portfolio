@@ -115,7 +115,7 @@ const Details = (props) => {
                                     )
                                 }
                                 {
-                                    typeof config.resume !== 'undefined' && config.resume && (
+                                    typeof config.social.leetcode !== 'undefined' && config.social.leetcode && (
                                         <li>
                                             <span>
                                                 <div>
@@ -136,7 +136,7 @@ const Details = (props) => {
                                 }
 
                                 {
-                                    typeof config.resume !== 'undefined' && config.resume && (
+                                    typeof config.social.codeforces !== 'undefined' && config.social.codeforces && (
                                         <li>
                                             <span>
                                                 <div>
