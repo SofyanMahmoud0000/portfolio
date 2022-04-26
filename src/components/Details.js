@@ -88,7 +88,7 @@ const Details = (props) => {
                                                 rel="noreferrer"
                                                 className="text-base-content-important"
                                             >
-                                                {config.github.username}
+                                                {'Github'}
                                             </a>
                                         </div>
                                     </span>
@@ -107,7 +107,7 @@ const Details = (props) => {
                                                         rel="noreferrer"
                                                         className="text-base-content-important"
                                                     >
-                                                        {config.social.linkedin}
+                                                        {'Linkedin'}
                                                     </a>
                                                 </div>
                                             </span>
@@ -128,7 +128,7 @@ const Details = (props) => {
                                                     rel="noreferrer"
                                                     className="text-base-content-important"
                                                 >
-                                                    {`My leetcode account`}
+                                                    {`Leetcode`}
                                                 </a>
                                             </span>
                                         </li>
@@ -149,7 +149,7 @@ const Details = (props) => {
                                                     rel="noreferrer"
                                                     className="text-base-content-important"
                                                 >
-                                                    {`My codeforces account`}
+                                                    {`Codeforces`}
                                                 </a>
                                             </span>
                                         </li>
@@ -169,7 +169,7 @@ const Details = (props) => {
                                                         rel="noreferrer"
                                                         className="text-base-content-important"
                                                     >
-                                                        {config.social.twitter}
+                                                        {'Twitter'}
                                                     </a>
                                                 </div>
                                             </span>
@@ -232,7 +232,7 @@ const Details = (props) => {
                                                         rel="noreferrer"
                                                         className="text-base-content-important"
                                                     >
-                                                        {config.social.facebook}
+                                                        {'Facebook'}
                                                     </a>
                                                 </div>
                                             </span>
@@ -295,7 +295,7 @@ const Details = (props) => {
                                                         rel="noreferrer"
                                                         className="text-base-content-important"
                                                     >
-                                                        {config.social.website}
+                                                        {"Portfolio"}
                                                     </a>
                                                 </div>
                                             </span>
@@ -352,7 +352,7 @@ const Details = (props) => {
                                                 </div>
 
                                                 <div onClick={saveFile} className="cursor-pointer">
-                                                    {'My resume'}
+                                                    {'Resume'}
                                                 </div>
                                             </span>
                                         </li>

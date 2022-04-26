@@ -1,4 +1,4 @@
-import { getDevtoArticle, getMediumArticle } from "article-api";
+// import { getDevtoArticle, getMediumArticle } from "article-api";
 import moment from "moment";
 import { Fragment, useContext, useEffect, useState } from "react";
 import { CgHashtag } from 'react-icons/cg';
@@ -25,25 +25,25 @@ const Blog = () => {
     const [articles, setArticles] = useState(null);
     const [loading] = useContext(LoadingContext);
 
-    useEffect(() => {
-        if (displaySection()) {
-            if (config.blog.source === 'medium') {
-                getMediumArticle({
-                    user: config.blog.username
-                })
-                    .then(res => {
-                        setArticles(res);
-                    });
-            } else if (config.blog.source === 'dev.to') {
-                getDevtoArticle({
-                    user: config.blog.username
-                })
-                    .then(res => {
-                        setArticles(res);
-                    });
-            }
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (displaySection()) {
+    //         if (config.blog.source === 'medium') {
+    //             getMediumArticle({
+    //                 user: config.blog.username
+    //             })
+    //                 .then(res => {
+    //                     setArticles(res);
+    //                 });
+    //         } else if (config.blog.source === 'dev.to') {
+    //             getDevtoArticle({
+    //                 user: config.blog.username
+    //             })
+    //                 .then(res => {
+    //                     setArticles(res);
+    //                 });
+    //         }
+    //     }
+    // }, [])
 
     const renderSkeleton = () => {
         let array = [];
